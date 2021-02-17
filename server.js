@@ -29,7 +29,7 @@ app.use (express.json());  // parse json first
 app.use (cors());
 
 // The following won't be used -- just for testing
-app.get ('/', (req, res) => { res.send('It is working!') })
+app.get ('/', (req, res) => { res.send('It is working!') 
 	// db.select('*').from('users')
 	// 	.then(users => {
 	// 		res.json(users);
