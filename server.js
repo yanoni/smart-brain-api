@@ -29,12 +29,12 @@ app.use (express.json());  // parse json first
 app.use (cors());
 
 // The following won't be used -- just for testing
-app.get ('/', (req, res) => {
-	db.select('*').from('users')
-		.then(users => {
-			res.json(users);
-		})
-		.catch(err => res.status(400).json('error getting users'));
+app.get ('/', (req, res) => { res.send('It is working!') })
+	// db.select('*').from('users')
+	// 	.then(users => {
+	// 		res.json(users);
+	// 	})
+	// 	.catch(err => res.status(400).json('error getting users'));
 })
 
 // Handle user sign-in
